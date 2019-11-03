@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {Component} from "react";
 import './App.css';
 import ToDo from "./components/ToDo.js"
 
-function App() {
+class App extends Component {
+  render(){
+
   return (
     <div className="App">
       <ul>
@@ -13,5 +15,6 @@ function App() {
     </div>
   );
 }
+  }
 
 export default App;
