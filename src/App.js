@@ -37,6 +37,13 @@ class App extends Component {
   handleChange(e) {
     this.setState({ newToDoDescription: e.target.value });
   }
+  deleteToDo(index) {
+    let toDos = [...this.state.todos];
+    let result = toDos.filter(entry => entry !== toDos[index]);
+    this.setState({
+      todos: result
+    });
+  }
   render() {
     return (
       <div className="App">
@@ -47,6 +54,7 @@ class App extends Component {
               description={todo.description}
               isCompleted={todo.isCompleted}
               toggleComplete={() => this.toggleComplete(index)}
+              deleteToDo={() => this.deleteToDo(index)}
             />
           ))}
         </ul>
