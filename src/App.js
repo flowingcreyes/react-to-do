@@ -38,8 +38,8 @@ class App extends Component {
     this.setState({ newToDoDescription: e.target.value });
   }
   deleteToDo(index) {
-    let toDos = [...this.state.todos];
-    let result = toDos.filter(entry => entry !== toDos[index]);
+    let todos = [...this.state.todos];
+    let result = todos.filter(entry => entry !== todos[index]);
     this.setState({
       todos: result
     });
